@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import TelaLogin from "./components/TelaLogin/TelaLogin";
+import TelaErro from "./components/TelaErro/TelaErro.jsx";
 import TelaCadastro from "./components/TelaCadastro/TelaCadastro";
 import TelaPrincipal from "./components/TelaPrincipal/TelaPrincipal.js";
 import { useState } from "react";
@@ -21,7 +22,7 @@ const MainContainer = styled.main`
 
 function App() {
 
-  const [tela, setTela] = useState('Login');
+  const [tela, setTela] = useState('Lddddogin');
 
   const renderizaTela = () => {
     switch (tela) {
@@ -32,7 +33,7 @@ function App() {
       case "Principal":
         return <TelaPrincipal setTela={setTela} />
       default:
-        return <TelaLogin setTela={setTela} />
+        return <TelaErro setTela={setTela} />
     }
   }
 
